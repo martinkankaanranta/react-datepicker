@@ -1,12 +1,10 @@
-# oh wow, picker of much dates
+# Simple and clean datepicker
 
-### A datepicker that does not have features!
+a simple date picker which picks dates. See original repository readme for more. 
+This is a fork.
 
-- why?
-because all other datepickers are written with cobol and php with a touch of jquery wrapped within react container and offer a features ranging from selecting space ships to drawing furries...
-- datepicker should only pick some dates
 
-![OH WOW](./img.png)
+![datepicker](./img.png)
 
 Uses `js-joda` for date models, because it works.
 
@@ -15,7 +13,7 @@ Uses `js-joda` for date models, because it works.
 - Formatting only by js-joda `DateTimeFormatter`, only used for input display value read/write
 - `valueFormatter` is the input value formatter and parser
 
-## Such usage, oh wow
+## Usage example
 
 ```tsx
 import React, { useState } from 'react'
@@ -51,24 +49,21 @@ export function App() {
 }
 ```
 
-## FAQ
-- why only hoc
-  - do input yourself, maybe use whatever you please
-- why does it look like sh...?
-  - comrade do css self, nyet my problem. only minimal style provided.
 
-## running locally
+## Running locally
 ```
 > yarn
 > yarn start
 ```
 
-## building lib
+## Building lib
 ```
 > yarn
 > yarn build:lib
 ```
 
-## much typescript
-
-written in typescript. almost.
+## Testing
+```
+> yarn test
+> yarn test:ci
+```
