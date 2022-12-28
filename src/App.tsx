@@ -1,7 +1,6 @@
 import { LocalDate } from 'js-joda'
 import React, { useState } from 'react'
-import { WithDatepicker } from './lib'
-import { datePickerConfig } from './lib/datepicker-config'
+import { WithDatepicker, datePickerConfig } from './lib'
 
 import './lib/datepicker.scss'
 
