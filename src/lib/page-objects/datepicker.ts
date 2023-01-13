@@ -12,29 +12,29 @@ export class Datepicker {
     fireEvent.blur(this.field())
   }
 
-  public field = () => this.ctx.getByTestId('field')
+  public field: any = () => this.ctx.queryByTestId('field')
   public focusInput = () => userEvent.click(this.field())
 
-  public datepicker = () => this.ctx.getByTestId('datepicker')
+  public datepicker = () => this.ctx.queryByTestId('datepicker')
   public isDatepickerOpen = () => this.ctx.queryByTestId('datepicker') !== null
 
-  public getDayCell = (day: number) =>
-    this.ctx.getByTestId(`datepicker__calendar__day--${day}`)
+  public getDayCell: any = (day: number) =>
+    this.ctx.queryByTestId(`datepicker__calendar__day--${day}`)
   public selectDay = (day: number) =>
     userEvent.click(
       this.getDayCell(day)
     )
 
   public nextYear = () =>
-    userEvent.click(this.ctx.getByTestId('yearselector__control--next'))
+    userEvent.click(this.ctx.queryByTestId('yearselector__control--next') as HTMLElement)
   public prevYear = () =>
-    userEvent.click(this.ctx.getByTestId('yearselector__control--prev'))
+    userEvent.click(this.ctx.queryByTestId('yearselector__control--prev') as HTMLElement)
 
   public nextMonth = () =>
-    userEvent.click(this.ctx.getByTestId('monthselector__control--next'))
+    userEvent.click(this.ctx.queryByTestId('monthselector__control--next') as HTMLElement)
 
   public prevMonth = () =>
-    userEvent.click(this.ctx.getByTestId('monthselector__control--prev'))
+    userEvent.click(this.ctx.queryByTestId('monthselector__control--prev') as HTMLElement)
 
   public static from = (ctx: RenderResult) => new Datepicker(ctx)
 }
